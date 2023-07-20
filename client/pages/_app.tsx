@@ -10,7 +10,7 @@ import {
   darkTheme,
 } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { goerli } from "wagmi/chains";
+import { sepolia } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 const epilogue = Epilogue({
@@ -18,7 +18,7 @@ const epilogue = Epilogue({
   variable: "--font-epilogue",
 });
 
-const { chains, provider } = configureChains([goerli], [publicProvider()]);
+const { chains, provider } = configureChains([sepolia], [publicProvider()]);
 
 const { connectors } = getDefaultWallets({
   appName: "Crowdfunding",
